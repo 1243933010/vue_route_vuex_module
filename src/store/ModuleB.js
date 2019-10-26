@@ -1,7 +1,12 @@
-import { RIDE ,SET_NUM,SETTIMEOUT_NUM} from './type'
+import { RIDE ,SET_NUM,SETTIMEOUT_NUM,GETTERS_NUM} from './type'
 export const ModuleB={
     state:{
         num:5
+    },
+    getters:{
+        [GETTERS_NUM](state){
+            return state.num + '***'
+        }
     },
     mutations:{
         [RIDE](state,data=1){
